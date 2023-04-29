@@ -1,0 +1,31 @@
+"```python
+def rec_fibonacci(n: int) -> int:
+    """"""
+    Calculate the fibonacci number recursively for a given positive integer n.
+
+    :param n: the input positive integer.
+    :return: the fibonacci number.
+    """"""
+    if n <= 0:
+        raise ValueError(""n must be a positive integer."")
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+    else:
+        return rec_fibonacci(n - 1) + rec_fibonacci(n - 2)
+
+
+def main() -> None:
+    n = int(input(""Enter a positive integer > 1 to calculate its fibonacci: ""))
+    try:
+        result = rec_fibonacci(n)
+        print(f""The fibonacci number of {n} is {result}."")
+    except ValueError as ex:
+        print(ex)
+
+
+if __name__ == ""__main__"":
+    main()
+```
+
+这段代码是一个使用 Python 编写的递归斐波那契数列计算函数。函数接受一个正整数输入，并输出相应的斐波那契数。代码通过递归实现斐波那契数列计算，并在输入不合法时给出错误提示。"
